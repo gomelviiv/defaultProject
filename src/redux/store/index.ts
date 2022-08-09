@@ -1,7 +1,10 @@
+import { tinderApi } from '@redux/login/login.api';
 import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    [tinderApi.reducerPath]: tinderApi.reducer,
+  },
 });
 
 export default store;

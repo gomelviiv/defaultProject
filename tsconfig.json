@@ -24,7 +24,10 @@
     "paths": {
       "@shared/*": ["./src/shared/*"],
       "@pages/*": ["./src/pages/*"],
-      "@redux/*": ["./src/redux/*"]
+      "@redux/*": ["./src/redux/*"],
+      "@configs/*": ["./src/configs/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   }
 }

@@ -28,6 +28,15 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8192,
+          },
+        },
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
@@ -36,6 +45,7 @@ module.exports = {
           'css-loader',
           // Compiles Sass to CSS
           'sass-loader',
+          'postcss-loader',
         ],
       },
     ],
@@ -46,6 +56,9 @@ module.exports = {
       '@shared': path.resolve(__dirname, './src/shared/'),
       '@pages': path.resolve(__dirname, './src/pages/'),
       '@redux': path.resolve(__dirname, './src/redux/'),
+      '@configs': path.resolve(__dirname, './src/configs/'),
+      '@routes': path.resolve(__dirname, './src/routes/'),
+      '@assets': path.resolve(__dirname, './src/assets/'),
     },
   },
   plugins: [

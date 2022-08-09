@@ -1,12 +1,18 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
 import store from '@redux/store';
+
+import AppRouter from './AppRouter';
+import './styles/index.scss';
 
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <div>123</div>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </Provider>
   );
 };
